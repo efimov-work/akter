@@ -54,10 +54,10 @@ export const MARQUEE = [
 ];
 
 export const STATS = [
-  { pre: 'от', value: 400, digits: 0, unit: 'тыс. ₽', label: 'за 1 м² в черновой отделке', src: 'Актуальные предложения', hot: 'sea' },
-  { pre: 'от', value: 500, digits: 0, unit: 'тыс. ₽', label: 'за 1 м² с ремонтом', src: 'Актуальные предложения', hot: 'sun' },
-  { pre: 'от', value: 35, digits: 0, unit: 'м²', label: 'площадь лота, до 500 м²', src: 'Данные застройщика', hot: '' },
-  { pre: '', value: 100, digits: 0, unit: 'м', label: 'высота стеклянного перекрытия атриума', src: 'Данные застройщика', hot: '' }
+  { pre: 'от', value: 400, digits: 0, unit: 'тыс. ₽', label: 'за 1 м² в черновой отделке', src: 'Актуальные предложения' },
+  { pre: 'от', value: 500, digits: 0, unit: 'тыс. ₽', label: 'за 1 м² с ремонтом', src: 'Актуальные предложения' },
+  { pre: 'от', value: 35, digits: 0, unit: 'м²', label: 'площадь лота, до 500 м²', src: 'Данные застройщика' },
+  { pre: '', value: 100, digits: 0, unit: 'м', label: 'высота стеклянного перекрытия атриума', src: 'Данные застройщика' }
 ];
 
 export const REASONS = [

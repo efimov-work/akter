@@ -14,7 +14,7 @@ export default function Numbers() {
         </div>
         <div className="nums">
           {STATS.map((s) => (
-            <div className={`ncell rv${s.hot ? ` hot ${s.hot}` : ''}`} key={s.label}>
+            <div className="ncell rv" key={s.label}>
               <div className="v">
                 {s.pre && <span className="u pre">{s.pre}</span>}
                 <span data-count={s.value} data-digits={s.digits}>

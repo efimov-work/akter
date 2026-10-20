@@ -633,36 +633,6 @@ section {
   margin: 0 8px 0 0;
 }
 
-.ncell.hot {
-  padding: 32px 28px 24px;
-  margin: 12px 12px 12px 0;
-  border: 0;
-  border-radius: 4px;
-  box-shadow: 0 24px 48px -28px rgba(15, 20, 23, .55);
-}
-
-.ncell.hot + .ncell {
-  border-left: 0;
-}
-
-.ncell.hot.sea {
-  background: linear-gradient(135deg, #0B7A8A, #19B3B0);
-}
-
-.ncell.hot.sun {
-  background: linear-gradient(135deg, #E0793F, #F2B33D);
-}
-
-.ncell.hot .v,
-.ncell.hot .u,
-.ncell.hot p {
-  color: #fff;
-}
-
-.ncell.hot small {
-  color: rgba(255, 255, 255, .75);
-}
-
 @media (max-width: 1000px) {
   .nums {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -681,10 +651,6 @@ section {
 @media (max-width: 520px) {
   .nums {
     grid-template-columns: 1fr;
-  }
-
-  .ncell.hot {
-    margin-right: 0;
   }
 
   .ncell,
@@ -1962,8 +1928,9 @@ select.inp option {
 }
 
 .lot-badge.hot {
-  background: linear-gradient(135deg, #E0793F, #F2B33D);
-  color: #fff;
+  background: rgba(15, 20, 23, .85);
+  color: var(--brass);
+  box-shadow: inset 0 0 0 1px var(--brass);
 }
 
 .lot-thumbs {
