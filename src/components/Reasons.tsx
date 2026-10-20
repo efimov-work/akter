@@ -9,7 +9,7 @@ export default function Reasons() {
             <p className="kick rv">Инвестиционные аргументы</p>
             <h2 className="disp h2 rv r2">Что получает инвестор</h2>
           </div>
-          <p className="lead rv r3">Готовый дом на первой линии с сервисом внутри периметра. Апартамент можно сдавать сразу после сделки.</p>
+          <p className="lead rv r3">В апартаменте можно отдыхать, жить постоянно или сдавать в аренду и получать пассивный доход через управляющую компанию.</p>
         </div>
         <div className="reasons">
           {REASONS.map((r, i) => (

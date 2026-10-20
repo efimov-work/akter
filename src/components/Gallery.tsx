@@ -31,7 +31,7 @@ export default function Gallery() {
             <Ph item={GALLERY.park} n={3} className="rv r3" />
           </div>
           <Ph item={GALLERY.terraces} n={4} className="g-c rv" />
-          <Ph item={GALLERY.evening} n={5} className="g-d rv r2" imgStyle={{ objectPosition: '70% 40%' }} />
+          <Ph item={GALLERY.evening} n={5} className="g-d rv r2" />
         </div>
       </div>
     </section>

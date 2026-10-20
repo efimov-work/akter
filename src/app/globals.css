@@ -629,6 +629,40 @@ section {
   color: #6B7579;
 }
 
+.ncell .pre {
+  margin: 0 8px 0 0;
+}
+
+.ncell.hot {
+  padding: 32px 28px 24px;
+  margin: 12px 12px 12px 0;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 24px 48px -28px rgba(15, 20, 23, .55);
+}
+
+.ncell.hot + .ncell {
+  border-left: 0;
+}
+
+.ncell.hot.sea {
+  background: linear-gradient(135deg, #0B7A8A, #19B3B0);
+}
+
+.ncell.hot.sun {
+  background: linear-gradient(135deg, #E0793F, #F2B33D);
+}
+
+.ncell.hot .v,
+.ncell.hot .u,
+.ncell.hot p {
+  color: #fff;
+}
+
+.ncell.hot small {
+  color: rgba(255, 255, 255, .75);
+}
+
 @media (max-width: 1000px) {
   .nums {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -647,6 +681,10 @@ section {
 @media (max-width: 520px) {
   .nums {
     grid-template-columns: 1fr;
+  }
+
+  .ncell.hot {
+    margin-right: 0;
   }
 
   .ncell,
@@ -1207,9 +1245,6 @@ section {
   pointer-events: none;
   white-space: nowrap;
   box-shadow: 0 12px 30px -10px rgba(0, 0, 0, .6);
-  opacity: 0;
-  visibility: hidden;
-  translate: 0 8px;
   transition: opacity .4s, visibility 0s .4s, translate .6s var(--ease), padding .5s, border-color .4s;
 }
 
@@ -1260,6 +1295,10 @@ section {
   font-size: calc(20px * var(--dz));
 }
 
+.spot:not(.on) .sp-card span {
+  display: none;
+}
+
 .spot.on .sp-card span {
   max-height: 40px;
   opacity: 1;
@@ -1299,6 +1338,50 @@ section {
   outline: 2px solid var(--brass);
   outline-offset: 2px;
   border-radius: 50%;
+}
+
+.mapph-dirs {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+.mapph-dirs li {
+  padding: 8px 14px;
+  background: rgba(15, 20, 23, .88);
+  border: 1px solid rgba(236, 230, 218, .22);
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--mist);
+}
+
+.mapph-dirs b {
+  display: block;
+  font: 500 14px var(--fb);
+  color: var(--sand);
+}
+
+.mapph-dirs b:after {
+  content: " →";
+  color: var(--brass);
+}
+
+@media (max-width: 720px) {
+  .spot:not(.main):not(.on) .sp-card {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .mapph-dirs {
+    display: none;
+  }
 }
 
 .mapph-hint {
@@ -1810,5 +1893,203 @@ select.inp option {
 
   .mq-track {
     animation: none !important;
+  }
+}
+
+.lot {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  background: var(--ink2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lot-day {
+  border-color: var(--brass);
+  margin-bottom: 24px;
+}
+
+.lots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.lots .lot {
+  grid-template-columns: 1fr;
+}
+
+.lot-ph {
+  position: relative;
+  aspect-ratio: 3/2;
+  background: var(--ink);
+}
+
+.lot-day .lot-ph {
+  aspect-ratio: auto;
+  min-height: 520px;
+}
+
+.lot-ph > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lot-ph > img[hidden] {
+  display: none;
+}
+
+.lot-badges {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lot-badge {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--brass);
+  color: var(--ink);
+}
+
+.lot-badge.hot {
+  background: linear-gradient(135deg, #E0793F, #F2B33D);
+  color: #fff;
+}
+
+.lot-thumbs {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.lot-thumbs button {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 48px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--ink);
+  opacity: .75;
+  transition: opacity .3s, border-color .3s;
+}
+
+.lot-thumbs button.on,
+.lot-thumbs button:hover {
+  opacity: 1;
+  border-color: var(--brass);
+}
+
+.lot-thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lot-body {
+  padding: clamp(24px, 3vw, 44px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.lot-title {
+  font-size: calc(clamp(24px, 2.2vw, 34px) * var(--dz));
+}
+
+.lot-price {
+  font-size: calc(clamp(40px, 4vw, 60px) * var(--dz));
+  line-height: 1;
+  color: var(--brass);
+}
+
+.lot-price small {
+  font-size: .45em;
+}
+
+.lot-spec {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+  margin: 0;
+  width: 100%;
+}
+
+.lot-spec dt {
+  font-size: 12px;
+  color: var(--mist);
+}
+
+.lot-spec dd {
+  margin: 2px 0 0;
+  font-size: 15px;
+}
+
+.lot-text {
+  margin: 0;
+  color: var(--mist);
+  font-size: 15px;
+}
+
+.lot-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lot-tags li {
+  font-size: 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.lot-body .btn {
+  margin-top: auto;
+}
+
+@media (max-width: 1000px) {
+  .lot,
+  .lots {
+    grid-template-columns: 1fr;
+  }
+
+  .lot-day .lot-ph {
+    min-height: 0;
+    aspect-ratio: 3/2;
+  }
+
+  .lot-thumbs {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    gap: 6px;
+  }
+
+  .lot-thumbs button {
+    width: 48px;
+    height: 32px;
   }
 }

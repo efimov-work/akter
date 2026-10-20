@@ -40,7 +40,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="lead fade d2" style={{ marginTop: 32 }}>
-              Сданный комплекс бизнес-класса от MR Group. 200 м до моря, собственный пляж, подземный паркинг на 4 уровня.
+              Комплекс класса Deluxe на первой береговой линии с собственным пляжем и апартаментами с террасой.
             </p>
             <div className="cta-row fade d3">
               <a className="btn" href="#calc">

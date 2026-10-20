@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Infrastructure from '@/components/Infrastructure';
 import Location from '@/components/Location';
+import Lots from '@/components/Lots';
 import Motion from '@/components/Motion';
 import Numbers from '@/components/Numbers';
 import Plans from '@/components/Plans';
@@ -20,6 +21,7 @@ export default function Page() {
         <Hero />
         <Numbers />
         <Reasons />
+        <Lots />
         <Architecture />
         <Calculator />
         <Location />

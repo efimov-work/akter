@@ -10,12 +10,13 @@ export default function Numbers() {
             <p className="kick rv">Рыночные показатели</p>
             <h2 className="disp h2 rv r2">Объект в цифрах</h2>
           </div>
-          <p className="lead rv r3">Данные по вторичному рынку комплекса на сентябрь 2026 года. Дом введен в эксплуатацию, сделки проходят по ДКП.</p>
+          <p className="lead rv r3">Готовый дом, где всё для жизни и отдыха внутри периметра. Дом введен в эксплуатацию, сделки проходят по ДКП.</p>
         </div>
         <div className="nums">
           {STATS.map((s) => (
-            <div className="ncell rv" key={s.label}>
+            <div className={`ncell rv${s.hot ? ` hot ${s.hot}` : ''}`} key={s.label}>
               <div className="v">
+                {s.pre && <span className="u pre">{s.pre}</span>}
                 <span data-count={s.value} data-digits={s.digits}>
                   {num(s.value, s.digits)}
                 </span>

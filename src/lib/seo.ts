@@ -1,5 +1,5 @@
-import { BASE_PATH } from './asset';
-import { ARCH_PHOTOS, COMPLEX, CONTACTS, GALLERY, HERO_ALT, INFRA, LOCATION_PHOTO, MAP_LINKS, PLANS } from './content';
+import { asset, BASE_PATH } from './asset';
+import { ARCH_PHOTOS, COMPLEX, CONTACTS, GALLERY, HERO_ALT, INFRA, LOCATION_PHOTO, LOTS, MAP_LINKS, PLANS } from './content';
 
 export const DEFAULT_SITE_URL = 'http://localhost:3000';
 
@@ -12,7 +12,7 @@ export const NOINDEX = process.env.SITE_NOINDEX === '1';
 
 export const TITLE = 'Апартаменты «Актер Гэлакси» в Сочи у моря для инвестиций';
 export const DESCRIPTION =
-  'Сданный комплекс бизнес-класса от MR Group на первой линии в Сочи: 200 м до моря, свой пляж, SPA, паркинг. Расчет доходности от посуточной аренды.';
+  'Сданный комплекс класса Deluxe на первой береговой линии в Сочи: собственный пляж, апартаменты с террасой, от 400 тыс. ₽ за м². Расчет доходности от посуточной аренды.';
 
 export const KEYWORDS = [
   'Актер Гэлакси',
@@ -62,10 +62,11 @@ export function absolute(path: string): string {
 
 export function pageImages(): { url: string; caption: string }[] {
   return [
-    { img: GALLERY.evening.img, alt: HERO_ALT },
+    { img: asset('/assets/hero.webp'), alt: HERO_ALT },
     ...Object.values(ARCH_PHOTOS),
     LOCATION_PHOTO,
-    ...Object.values(GALLERY).filter((g) => g !== GALLERY.evening),
+    ...Object.values(GALLERY),
+    ...LOTS.flatMap((l) => l.photos),
     ...PLANS
   ].map((p) => ({ url: absolute(p.img), caption: p.alt }));
 }

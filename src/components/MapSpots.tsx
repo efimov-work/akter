@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, type MouseEvent } from 'react';
-import { LOCATION_PHOTO, SPOTS } from '@/lib/content';
+import { DIRECTIONS, LOCATION_PHOTO, SPOTS } from '@/lib/content';
 
 export default function MapSpots() {
   const [on, setOn] = useState(-1);
@@ -43,7 +43,15 @@ export default function MapSpots() {
           </span>
         </button>
       ))}
-      <figcaption className="mapph-hint">Наведите на точку</figcaption>
+      <ul className="mapph-dirs" aria-label="Направления от комплекса">
+        {DIRECTIONS.map((d) => (
+          <li key={d.name}>
+            <b>{d.name}</b>
+            <span>{d.meta}</span>
+          </li>
+        ))}
+      </ul>
+      <figcaption className="mapph-hint">Наведите на подпись</figcaption>
     </figure>
   );
 }
