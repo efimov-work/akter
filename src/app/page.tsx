@@ -1,5 +1,6 @@
 import Architecture from '@/components/Architecture';
 import Calculator from '@/components/Calculator';
+import ChatWidget from '@/components/ChatWidget';
 import Footer from '@/components/Footer';
 import Gallery from '@/components/Gallery';
 import Header from '@/components/Header';
@@ -32,6 +33,7 @@ export default function Page() {
       </main>
       <Footer />
       <Motion />
+      <ChatWidget />
     </div>
   );
 }
