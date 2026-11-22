@@ -5,4 +5,4 @@
 :HL["/akter/_next/static/css/cc57b8312cefa410.css","style"]
 :HL["/akter/assets/hero.webp","image",{"imageSrcSet":"/akter/assets/hero-1200.webp 1200w, /akter/assets/hero.webp 1680w","imageSizes":"100vw","fetchPriority":"high"}]
 :HL["/akter/assets/arch-dome.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"nGmT2Ae8FOIcTC4vUcVX4"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"Z0Awa7XTufb-r3EKmfJVw"}

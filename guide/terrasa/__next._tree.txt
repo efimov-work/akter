@@ -5,4 +5,4 @@
 :HL["/akter/_next/static/css/cc57b8312cefa410.css","style"]
 :HL["/akter/_next/static/css/599bb0df723654db.css","style"]
 :HL["/akter/assets/guide/terrasa.webp","image",{"fetchPriority":"high"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"guide","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"terrasa","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"nGmT2Ae8FOIcTC4vUcVX4"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"guide","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"terrasa","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"Z0Awa7XTufb-r3EKmfJVw"}
