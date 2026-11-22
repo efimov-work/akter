@@ -238,6 +238,29 @@ section {
   transform-origin: left;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
+
+.nav-lead-short { display: none; }
+
+@media (max-width: 1240px) {
+  .nav-in { gap: 14px; }
+  .links { gap: 14px; }
+}
+
+@media (max-width: 560px) {
+  .nav-in .logo { font-size: .94rem; gap: 6px; }
+  .nav-in .logo .lmk { width: 26px; height: auto; }
+  .nav-in .nav-actions { gap: 6px; }
+  .nav-in .nav-actions .btn { padding-inline: 9px; font-size: .8rem; }
+  .nav-in .nav-lead-wide { display: none; }
+  .nav-in .nav-lead-short { display: inline; }
+}
+
 @media (max-width: 960px) {
   .links {
     display: none;

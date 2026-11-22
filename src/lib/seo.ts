@@ -8,7 +8,7 @@ export const SITE_NAME = 'Актер Гэлакси';
 export const YANDEX_VERIFICATION = process.env.YANDEX_VERIFICATION || undefined;
 export const GOOGLE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION || undefined;
 
-export const NOINDEX = process.env.SITE_NOINDEX === '1';
+export const NOINDEX = process.env.SITE_NOINDEX === '1' || siteOrigin() === DEFAULT_SITE_URL;
 
 export const TITLE = 'Апартаменты «Актер Гэлакси» в Сочи у моря для инвестиций';
 export const DESCRIPTION =
@@ -46,7 +46,8 @@ export function siteOrigin(): string {
   const raw = (process.env.NEXT_PUBLIC_SITE_URL || '').trim();
   if (!raw) return DEFAULT_SITE_URL;
   try {
-    return new URL(raw).origin;
+    const url = new URL(raw);
+    return url.protocol === 'http:' || url.protocol === 'https:' ? url.origin : DEFAULT_SITE_URL;
   } catch {
     return DEFAULT_SITE_URL;
   }

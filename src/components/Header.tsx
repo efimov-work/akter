@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { NAV } from '@/lib/content';
 import LogoMark from './LogoMark';
 
@@ -28,9 +29,13 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a className="btn sm" href="#lead">
-          Запросить расчёт
-        </a>
+        <div className="nav-actions">
+          <Link className="btn sm ghost" href="/guide">Гид</Link>
+          <a className="btn sm nav-lead" href="#lead" aria-label="Запросить расчёт">
+            <span className="nav-lead-wide">Запросить расчёт</span>
+            <span className="nav-lead-short" aria-hidden="true">Расчёт</span>
+          </a>
+        </div>
       </div>
     </header>
   );

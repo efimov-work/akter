@@ -13,6 +13,7 @@ import Numbers from '@/components/Numbers';
 import Plans from '@/components/Plans';
 import Reasons from '@/components/Reasons';
 import Request from '@/components/Request';
+import { buildJsonLd } from '@/lib/seo';
 
 export default function Page() {
   return (
@@ -34,6 +35,7 @@ export default function Page() {
       <Footer />
       <Motion />
       <ChatWidget />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd()).replace(/</g, '\\u003c') }} />
     </div>
   );
 }
