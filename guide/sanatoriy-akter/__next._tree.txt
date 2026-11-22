@@ -1,0 +1,7 @@
+:HL["/akter/_next/static/media/6961d055d00ff7ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/akter/_next/static/media/6ce0d0fd45f1bd74-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/akter/_next/static/media/7a820720491a53d2-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/akter/_next/static/media/cd87a8f174d93ac6-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/akter/_next/static/css/cc57b8312cefa410.css","style"]
+:HL["/akter/_next/static/css/599bb0df723654db.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"guide","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"sanatoriy-akter","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"nGmT2Ae8FOIcTC4vUcVX4"}
